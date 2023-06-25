@@ -5,20 +5,30 @@ import { MyOrder } from '../MyOrder/MyOrder'
 import { MyOrders } from '../MyOrders/MyOrders'
 import { NotFound } from '../NotFound/NotFound'
 import { SignIn } from '../SignIn/SignIn'
+import { Navbar } from '../../Components/Navbar/Navbar'
+
+import { useRoutes, BrowserRouter } from 'react-router-dom';
+
+const AppRoutes = () => {
+  let routes = useRoutes([
+    {path:'/',element: <Home />},
+    {path:'/my-account',element: <MyAccount />},
+    {path:'/my-order',element: <MyOrder />},
+    {path:'/my-orders',element: <MyOrders />},
+    {path:'/sign-in',element: <SignIn />},
+    {path:'*',element: <NotFound />},
+  ]);
+  return routes;
+}
 
 
-function App() {
-  
+const App =() => {
+
   return (
-    <>
-      <div className='bg-teal-500'>Hello World Baby!</div>        
-      <Home />
-      <MyAccount />
-      <MyOrder />
-      <MyOrders />
-      <SignIn />
-      <NotFound />
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+      <Navbar />
+    </BrowserRouter>
   )
 }
 
