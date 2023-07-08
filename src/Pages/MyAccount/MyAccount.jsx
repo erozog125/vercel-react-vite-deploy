@@ -1,7 +1,10 @@
 import React from 'react'
+import { Layout } from '../../Components/Layout/Layout'
 
 export const MyAccount = () => {
   return (
-    <div className='bg-orange-600'>MyAccount</div>
+    <Layout>
+      MyAccount
+    </Layout>
   )
 }

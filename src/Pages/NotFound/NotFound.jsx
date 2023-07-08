@@ -1,7 +1,10 @@
 import React from 'react'
+import { Layout } from '../../Components/Layout/Layout'
 
 export const NotFound = () => {
   return (
-    <div className='bg-emerald-400'>NotFound</div>
+    <Layout>
+      NotFound
+    </Layout>
   )
 }
