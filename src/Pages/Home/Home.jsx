@@ -19,7 +19,7 @@ export const Home = () => {
   return (
     <Layout>
       {
-        products.map( product => <Card product={ product } />)
+        products.map( product => <Card key={ product.id } product={ product } />)
       }
     </Layout>
   )

@@ -1,3 +1,6 @@
+import { useRoutes, BrowserRouter } from 'react-router-dom';
+import { ShoppingCartProvider } from '../../Components/Context/Context';
+
 import { Home } from '../Home/Home';
 import './App.css';
 import { MyAccount } from '../MyAccount/MyAccount'
@@ -7,7 +10,6 @@ import { NotFound } from '../NotFound/NotFound'
 import { SignIn } from '../SignIn/SignIn'
 import { Navbar } from '../../Components/Navbar/Navbar'
 
-import { useRoutes, BrowserRouter } from 'react-router-dom';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -25,10 +27,12 @@ const AppRoutes = () => {
 const App =() => {
 
   return (
-    <BrowserRouter>
-      <AppRoutes />
-      <Navbar />
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <AppRoutes />
+        <Navbar />
+      </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
