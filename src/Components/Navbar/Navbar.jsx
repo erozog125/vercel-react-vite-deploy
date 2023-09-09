@@ -10,7 +10,7 @@ export const Navbar = () => {
   const context = useContext(ShoppingCartContext)
 
   return (
-    <nav className='bg-slate-300 flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
+    <nav className='bg-sky-400 flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
       <ul className='flex items-center gap-3'>
         <li className='font-semibold text-lg text-blue-900'>
           <NavLink 
